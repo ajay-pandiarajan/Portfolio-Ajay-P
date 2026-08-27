@@ -131,29 +131,7 @@
                             <span class="glass-tag">JavaScript</span>
                         </div>
                     </div>
-
-                    <div class="glass-card skill-box bento-span-3">
-                        <div class="card-glow"></div>
-                        <div class="skill-header">
-                            <span class="skill-icon">🛠️</span>
-                            <h3>Software, Tools &amp; Web Dashboards</h3>
-                        </div>
-                        <div class="tags-container">
-                            <span class="glass-tag">PlatformIO</span>
-                            <span class="glass-tag">MATLAB</span>
-                            <span class="glass-tag">Flask</span>
-                            <span class="glass-tag">Streamlit</span>
-                            <span class="glass-tag">SQLite</span>
-                            <span class="glass-tag">Git &amp; GitHub</span>
-                            <span class="glass-tag">Docker</span>
-                            <span class="glass-tag">FreeRTOS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications & Achievements Bento Grid -->
+<!-- Certifications & Achievements Bento Grid with Images -->
         <section id="certifications" class="section reveal">
             <div class="container">
                 <div class="section-header text-center">
@@ -162,7 +140,7 @@
                 </div>
 
                 <div class="bento-grid certs-bento">
-                    <!-- Featured Wide Card -->
+                    <!-- Featured Wide Card with Image Previews -->
                     <div class="glass-card bento-span-2 bento-row-2 bento-featured">
                         <div class="card-glow"></div>
                         <div class="badge-pill">NPTEL ELITE</div>
@@ -171,23 +149,80 @@
                             Secured top-tier Elite certifications in Industry 4.0 and IoT Protocols from NPTEL. Specialized in industrial sensor fusion and deterministic automation systems.
                         </p>
                         <div class="cert-list">
-                            <div class="cert-item">
-                                <span class="cert-dot"></span>
-                                <div>
-                                    <strong>Intro to Industry 4.0 &amp; IIoT</strong>
-                                    <span class="cert-meta">NPTEL — Elite (81%)</span>
+                            <div class="cert-item" style="flex-direction: column; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span class="cert-dot"></span>
+                                    <div>
+                                        <strong>Intro to Industry 4.0 &amp; IIoT</strong>
+                                        <span class="cert-meta">NPTEL — Elite (81%)</span>
+                                    </div>
                                 </div>
+                                <!-- Change 'nptel-iiot-cert.png' to your actual image filename -->
+                                <a href="nptel-iiot-cert.png" target="_blank" style="margin-top: 10px; width: 100%;">
+                                    <img src="nptel-iiot-cert.png" alt="NPTEL IIoT Certificate" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glass);" onerror="this.style.display='none';">
+                                </a>
                             </div>
-                            <div class="cert-item">
-                                <span class="cert-dot"></span>
-                                <div>
-                                    <strong>Intro to Internet of Things</strong>
-                                    <span class="cert-meta">NPTEL — Elite (76%)</span>
+
+                            <div class="cert-item" style="flex-direction: column; align-items: flex-start; margin-top: 16px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span class="cert-dot"></span>
+                                    <div>
+                                        <strong>Intro to Internet of Things</strong>
+                                        <span class="cert-meta">NPTEL — Elite (76%)</span>
+                                    </div>
                                 </div>
+                                <!-- Change 'nptel-iot-cert.png' to your actual image filename -->
+                                <a href="nptel-iot-cert.png" target="_blank" style="margin-top: 10px; width: 100%;">
+                                    <img src="nptel-iot-cert.png" alt="NPTEL IoT Certificate" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-glass);" onerror="this.style.display='none';">
+                                </a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Single Card with Image -->
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <div class="badge-pill">HACKATHONS</div>
+                        <h3 class="card-heading">Smart India Hackathon 2025</h3>
+                        <!-- Change 'sih-cert.png' to your actual image filename -->
+                        <a href="sih-cert.png" target="_blank">
+                            <img src="sih-cert.png" alt="Smart India Hackathon Certificate" style="width: 100%; height: 120px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--border-glass);" onerror="this.style.display='none';">
+                        </a>
+                        <p class="card-text">Shortlisted participant building rapid embedded hardware prototypes for national-level problem statements.</p>
+                        <a href="sih-cert.png" target="_blank" class="btn-action" style="margin-top: 10px;">View Certificate</a>
+                    </div>
+
+                    <!-- Single Card with Image -->
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <div class="badge-pill">RESEARCH</div>
+                        <h3 class="card-heading">Intl. Space Science Conference</h3>
+                        <!-- Change 'space-cert.png' to your actual image filename -->
+                        <a href="space-cert.png" target="_blank">
+                            <img src="space-cert.png" alt="Space Conference Certificate" style="width: 100%; height: 120px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--border-glass);" onerror="this.style.display='none';">
+                        </a>
+                        <p class="card-text">Participated in global symposiums exploring space-grade telemetry and remote satellite communication technologies.</p>
+                        <a href="space-cert.png" target="_blank" class="btn-action" style="margin-top: 10px;">View Certificate</a>
+                    </div>
+
+                    <!-- Single Card with Image -->
+                    <div class="glass-card bento-span-2">
+                        <div class="card-glow"></div>
+                        <div class="badge-pill">PROGRAMMING</div>
+                        <h3 class="card-heading">Advanced Software &amp; C Development</h3>
+                        <!-- Change 'programming-cert.png' to your actual image filename -->
+                        <a href="programming-cert.png" target="_blank">
+                            <img src="programming-cert.png" alt="Programming Certificate" style="width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border-glass);" onerror="this.style.display='none';">
+                        </a>
+                        <div class="tags-container">
+                            <span class="glass-tag">Advanced Diploma in Java (CSC)</span>
+                            <span class="glass-tag">C Certification (IIT Bombay)</span>
+                            <span class="glass-tag">Python &amp; Java (HackerRank)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
                     <!-- Single Card -->
                     <div class="glass-card">
                         <div class="card-glow"></div>
