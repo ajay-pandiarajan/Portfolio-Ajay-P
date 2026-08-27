@@ -358,18 +358,17 @@ body {
   position: relative;
 }
 
+/* UPDATED GLASS AVATAR FRAME: Forces clipping and prevents overflowing */
 .glass-avatar-frame {
   position: relative;
-  width: 320px;
-  height: 380px;
+  width: 340px;
+  height: 420px;
   background: var(--bg-card);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-glass-bright);
   border-radius: 32px;
-  overflow: visible;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden; /* Clips the image inside the card boundaries */
 }
 
 .avatar-glow {
@@ -382,11 +381,14 @@ body {
   z-index: -1;
 }
 
+/* UPDATED AVATAR IMAGE: Fills parent container completely with smooth proportions */
 .avatar-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 32px;
+  object-fit: cover; /* Prevents stretching and scales photo proportionally */
+  object-position: center;
+  border-radius: inherit;
+  display: block;
 }
 
 .avatar-placeholder {
@@ -402,10 +404,12 @@ body {
   border-radius: 32px;
 }
 
+/* UPDATED FLOATING TAGS: Keeps pills on top of the image container */
 .floating-tag {
   position: absolute;
   background: rgba(10, 10, 15, 0.85);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-glass-bright);
   padding: 10px 18px;
   border-radius: 100px;
@@ -415,10 +419,11 @@ body {
   font-size: 0.85rem;
   font-weight: 500;
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  z-index: 10; /* Ensures tags render over the image frame */
 }
 
-.tag-1 { top: -20px; left: -30px; }
-.tag-2 { bottom: -20px; right: -30px; }
+.tag-1 { top: 16px; left: 16px; }
+.tag-2 { bottom: 16px; right: 16px; }
 
 /* Quote Card */
 .quote-card {
