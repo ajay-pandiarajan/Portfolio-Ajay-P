@@ -543,11 +543,7 @@ body {
 }
 
 /* ==========================================================================
-   FULL EDGE-TO-EDGE 4:3 RATIO SEAMLESS PROJECT GRID
-   ========================================================================== */
-
-/* ==========================================================================
-   FULL SCREEN EDGE-TO-EDGE PROJECT GRID
+   FULL EDGE-TO-EDGE REFERENCE DESIGN (3-COLUMN FULL PAGE GRID)
    ========================================================================== */
 
 .projects-section {
@@ -556,28 +552,7 @@ body {
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Hide or adjust section header spacing inside projects section */
-.projects-section .section-header {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  margin-bottom: 0;
-  pointer-events: none;
-  background: rgba(7, 7, 9, 0.6);
-  padding: 8px 20px;
-  border-radius: 100px;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-glass);
-}
-
-.projects-section .section-title {
-  font-size: 1.5rem;
+  overflow: hidden;
 }
 
 .projects-fullwidth-grid {
@@ -585,7 +560,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   max-width: 100%;
-  height: 100vh; /* Fills entire viewport height */
+  height: 100vh;
   margin: 0;
   padding: 0;
   gap: 0;
@@ -595,13 +570,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3; /* Maintains 4:3 aspect ratio */
   overflow: hidden;
+  background: #000;
   border: none;
   border-radius: 0;
-  background: #000;
 }
 
+/* Background Image Scaling */
 .project-card-bg {
   width: 100%;
   height: 100%;
@@ -612,27 +587,30 @@ body {
 }
 
 .project-card:hover .project-card-bg {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
-/* Hover Reveal Overlay & Text */
+/* Hover Reveal Gradient Overlay */
 .project-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 7, 9, 0.2) 0%, rgba(7, 7, 9, 0.95) 85%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 24px;
+  background: linear-gradient(
+    180deg, 
+    rgba(0, 0, 0, 0) 20%, 
+    rgba(0, 0, 0, 0.75) 60%, 
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 8px;
-  
+  gap: 10px;
+
   /* Hidden state by default */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(12px);
+  transform: translateY(16px);
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
 
@@ -642,47 +620,78 @@ body {
   transform: translateY(0);
 }
 
+/* Category Label */
 .project-category {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 3px 10px;
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--accent-cyan);
+  color: var(--accent-cyan, #00DFD8);
 }
 
+/* Title */
 .project-card-overlay .project-title {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  color: #ffffff;
   margin: 0;
-  color: #fff;
   line-height: 1.2;
 }
 
 /* Compact Description (0.8rem, Max 2-3 lines) */
 .project-card-overlay .project-desc {
   font-size: 0.8rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
+  color: #a1a1aa;
+  line-height: 1.45;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
+  max-width: 90%;
 }
 
-.project-card-overlay .project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+/* "VIEW REPORT" Outlined Button Style */
+.btn-report {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
 }
 
-.project-card-overlay .glass-tag {
-  font-size: 0.65rem;
-  padding: 2px 8px;
+.btn-report:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Grid behavior */
+@media (max-width: 992px) {
+  .projects-fullwidth-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .project-card {
+    height: 60vh;
+  }
+  
+  .project-card-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================================
