@@ -546,11 +546,38 @@ body {
    FULL EDGE-TO-EDGE 4:3 RATIO SEAMLESS PROJECT GRID
    ========================================================================== */
 
+/* ==========================================================================
+   FULL SCREEN EDGE-TO-EDGE PROJECT GRID
+   ========================================================================== */
+
 .projects-section {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
   width: 100vw;
   max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide or adjust section header spacing inside projects section */
+.projects-section .section-header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  margin-bottom: 0;
+  pointer-events: none;
+  background: rgba(7, 7, 9, 0.6);
+  padding: 8px 20px;
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+}
+
+.projects-section .section-title {
+  font-size: 1.5rem;
 }
 
 .projects-fullwidth-grid {
@@ -558,6 +585,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   max-width: 100%;
+  height: 100vh; /* Fills entire viewport height */
   margin: 0;
   padding: 0;
   gap: 0;
@@ -566,7 +594,8 @@ body {
 .project-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  aspect-ratio: 4 / 3; /* Maintains 4:3 aspect ratio */
   overflow: hidden;
   border: none;
   border-radius: 0;
@@ -600,7 +629,7 @@ body {
   align-items: flex-start;
   gap: 8px;
   
-  /* Hidden state */
+  /* Hidden state by default */
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
@@ -654,81 +683,6 @@ body {
 .project-card-overlay .glass-tag {
   font-size: 0.65rem;
   padding: 2px 8px;
-}
-
-/* Footer Section */
-.footer-card {
-  padding: 60px 40px;
-  background: rgba(20, 20, 28, 0.5);
-}
-
-.footer-title {
-  font-size: 2.5rem;
-  margin: 12px 0 16px;
-}
-
-.footer-desc {
-  color: var(--text-secondary);
-  max-width: 500px;
-  margin: 0 auto 32px;
-}
-
-.email-link {
-  font-family: var(--font-mono);
-  font-size: 1.5rem;
-  color: var(--accent-cyan);
-  text-decoration: none;
-  border-bottom: 2px solid var(--accent-cyan);
-  padding-bottom: 4px;
-  transition: var(--transition-smooth);
-}
-
-.email-link:hover {
-  color: #fff;
-  border-color: #fff;
-}
-
-.social-grid {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 40px 0;
-}
-
-.social-pill {
-  padding: 8px 24px;
-  border-radius: 100px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: var(--transition-smooth);
-}
-
-.social-pill:hover {
-  color: #fff;
-  border-color: var(--border-glass-bright);
-  transform: translateY(-2px);
-}
-
-.footer-bottom {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-glass);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* Scroll Animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* ==========================================================================
