@@ -29,9 +29,9 @@
                 <a href="#contact" class="nav-item">Contact</a>
             </div>
             
-            <div class="nav-actions">
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
                 <!-- Light / Dark Mode Toggle Button -->
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme" style="background: transparent; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); color: currentColor; cursor: pointer; padding: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 </button>
 
@@ -70,7 +70,7 @@
                     <div class="glass-avatar-frame">
                         <div class="avatar-glow"></div>
                         <img src="profile.jpeg" alt="Ajay P" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="avatar-placeholder" style="display:none;">
+                        <div class="avatar-placeholder">
                             <span>AJAY P</span>
                         </div>
                         <div class="floating-tag tag-1">
@@ -107,70 +107,76 @@
                     <h2 class="section-title">Educational Journey</h2>
                 </div>
 
-                <div class="grid-2-col">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px;">
+                    
                     <!-- Education 1 -->
-                    <div class="glass-card edu-card">
+                    <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; padding: 36px;">
                         <div class="card-glow"></div>
                         <div>
-                            <div class="edu-header">
-                                <div class="edu-icon">🎓</div>
+                            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;">
+                                <div style="font-size: 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                    🎓
+                                </div>
                                 <div>
-                                    <h3 class="edu-title">Mepco Schlenk Engineering College</h3>
-                                    <p class="edu-degree">Bachelor of Engineering (Electronics and Communication Engineering-ECE)</p>
+                                    <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; line-height: 1.2;">Mepco Schlenk Engineering College</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Bachelor of Engineering (Electronics and Communication Engineering-ECE)</p>
                                 </div>
                             </div>
                             
-                            <hr class="divider">
+                            <hr style="border: none; border-top: 1px solid var(--border-glass); margin-bottom: 20px;">
 
-                            <div class="edu-details">
+                            <div style="display: flex; gap: 40px; margin-bottom: 24px;">
                                 <div>
-                                    <span class="meta-label">PERIOD</span>
-                                    <span class="meta-val">Sep 2024 – Present</span>
+                                    <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">PERIOD</span>
+                                    <span style="font-weight: 600; font-size: 0.95rem;">Sep 2024 – Present</span>
                                 </div>
                                 <div>
-                                    <span class="meta-label">GRADE</span>
-                                    <span class="meta-val highlight-cyan">8.04 CGPA</span>
+                                    <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">GRADE</span>
+                                    <span style="font-weight: 700; font-size: 1.05rem; color: var(--accent-cyan);">8.04 CGPA</span>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <span class="meta-label">SKILLS &amp; FOCUS</span>
-                            <p class="edu-skills">C, C++[Data Structures], Python, Java, Matlab, IoT, VLSI Design</p>
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">SKILLS &amp; FOCUS</span>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">C, C++[Data Structures], Python, Java, Matlab, IoT, VLSI Design</p>
                         </div>
                     </div>
 
                     <!-- Education 2 -->
-                    <div class="glass-card edu-card">
+                    <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; padding: 36px;">
                         <div class="card-glow"></div>
                         <div>
-                            <div class="edu-header">
-                                <div class="edu-icon">🎓</div>
+                            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;">
+                                <div style="font-size: 2rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                    🎓
+                                </div>
                                 <div>
-                                    <h3 class="edu-title">TVS Matriculation Higher Secondary School</h3>
-                                    <p class="edu-degree">Biology-Mathematics (General)</p>
+                                    <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; line-height: 1.2;">TVS Matriculation Higher Secondary School</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Biology-Mathematics (General)</p>
                                 </div>
                             </div>
                             
-                            <hr class="divider">
+                            <hr style="border: none; border-top: 1px solid var(--border-glass); margin-bottom: 20px;">
 
-                            <div class="edu-details">
+                            <div style="display: flex; gap: 40px; margin-bottom: 24px;">
                                 <div>
-                                    <span class="meta-label">PERIOD</span>
-                                    <span class="meta-val">Jun 2019 – May 2023</span>
+                                    <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">PERIOD</span>
+                                    <span style="font-weight: 600; font-size: 0.95rem;">Jun 2019 – May 2023</span>
                                 </div>
                                 <div>
-                                    <span class="meta-label">GRADE</span>
-                                    <span class="meta-val highlight-pink">87.66 %</span>
+                                    <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">GRADE</span>
+                                    <span style="font-weight: 700; font-size: 1.05rem; color: var(--accent-pink);">87.66 %</span>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <span class="meta-label">ACTIVITIES</span>
-                            <p class="edu-skills">1. Basketball &nbsp; 2. Athlete </p>
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">ACTIVITIES</span>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">1. Basketball &nbsp; 2. Athlete </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -191,12 +197,12 @@
                         </div>
                         <p class="skill-desc">Designing low-power microcontrollers, sensor nodes, and real-time serial buses.</p>
                         <div class="tags-container">
-                            <span class="glass-tag">ESP32 &amp; STM32: High-performance, low-power microcontrollers</span>
-                            <span class="glass-tag">Arduino: Hardware prototyping &amp; sensor integration</span>
-                            <span class="glass-tag">Raspberry Pi: Edge computing &amp; protocol handling</span>
-                            <span class="glass-tag">nRF52832 SoC: BLE proximity tracking</span>
-                            <span class="glass-tag">BLE (Bluetooth Low Energy): Asset tracking</span>
-                            <span class="glass-tag">UART &amp; Serial Buses: Inter-chip communication</span>
+                            <span class="glass-tag">ESP32 &amp; STM32: High-performance, low-power microcontrollers used for real-time sensor processing and IoT node development</span>
+                            <span class="glass-tag">Arduino: Microcontroller platform utilized for rapid hardware prototyping, sensor integration, and biometric logic.</span>
+                            <span class="glass-tag">Raspberry Pi: Single-board computer used for edge computing, high-level system orchestration, and protocol handling.</span>
+                            <span class="glass-tag">nRF52832 SoC: Bluetooth Low Energy (BLE) System-on-Chip designed for ultra-low-power proximity tracking and beacon applications.</span>
+                            <span class="glass-tag">BLE (Bluetooth Low Energy): Short-range wireless stack optimized for low-energy asset tracking and bio-signal feedback.</span>
+                            <span class="glass-tag">UART &amp; Serial Buses: Standard serial protocols for reliable inter-chip communication and real-time hardware data transfer.</span>
                         </div>
                     </div>
                     
@@ -227,213 +233,267 @@
                     <h2 class="section-title">Achievements &amp; Certifications</h2>
                 </div>
 
-                <div class="cert-grid">
+                <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    
                     <!-- Cert 1 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="nptel2.png" target="_blank" class="cert-img-wrapper">
-                            <img src="nptel2.png" alt="Industry 4.0 & IIoT Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="nptel2.png" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="nptel2.png" alt="Industry 4.0 & IIoT Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>Introduction to Industry 4.0 &amp; IIoT</h3>
-                                <p>NPTEL — Elite (60%)</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">Introduction to Industry 4.0 &amp; IIoT</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">NPTEL — Elite (60%)</p>
                             </div>
-                            <span class="cert-tag">☆ FEATURED ACHIEVEMENT</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">☆ FEATURED ACHIEVEMENT</span>
                         </div>
                     </div>
 
                     <!-- Cert 2 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="nptel1.png" target="_blank" class="cert-img-wrapper">
-                            <img src="nptel1.png" alt="Introduction to Internet of Things Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="nptel1.png" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="nptel1.png" alt="Introduction to Internet of Things Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>Introduction to Internet of Things</h3>
-                                <p>NPTEL — Elite (81%)</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">Introduction to Internet of Things</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">NPTEL — Elite (81%)</p>
                             </div>
-                            <span class="cert-tag">☆ FEATURED ACHIEVEMENT</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">☆ FEATURED ACHIEVEMENT</span>
                         </div>
                     </div>
 
                     <!-- Cert 3 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="C_cert.jpg" target="_blank" class="cert-img-wrapper">
-                            <img src="C_cert.jpg" alt="C/C++ Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="C_cert.jpg" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="C_cert.jpg" alt="C/C++ Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>C/C++ Programming &amp; DSA</h3>
-                                <p>SSI Institutions, Madurai</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">C/C++ Programming &amp; DSA</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">SSI Institutions, Madurai</p>
                             </div>
-                            <span class="cert-tag">PROGRAMMING</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">PROGRAMMING</span>
                         </div>
                     </div>
 
                     <!-- Cert 4 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="Python_cert.jpg" target="_blank" class="cert-img-wrapper">
-                            <img src="Python_cert.jpg" alt="Python Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="Python_cert.jpg" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="Python_cert.jpg" alt="Python Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>Python Programming Language</h3>
-                                <p>SSI Institutions, Madurai</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">Python Programming Language</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">SSI Institutions, Madurai</p>
                             </div>
-                            <span class="cert-tag">PROGRAMMING</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">PROGRAMMING</span>
                         </div>
                     </div>
 
                     <!-- Cert 5 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="Ieee_cert.jpg" target="_blank" class="cert-img-wrapper">
-                            <img src="Ieee_cert.jpg" alt="IEEE Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="Ieee_cert.jpg" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="Ieee_cert.jpg" alt="IEEE Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>IEEE English for Technical Professionals</h3>
-                                <p>IEEE Certification</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">IEEE English for Technical Professionals</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">IEEE Certification</p>
                             </div>
-                            <span class="cert-tag">PROFESSIONAL DEVELOPMENT</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">PROFESSIONAL DEVELOPMENT</span>
                         </div>
                     </div>
 
                     <!-- Cert 6 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="erode.jpg" target="_blank" class="cert-img-wrapper">
-                            <img src="erode.jpg" alt="GALAXY26 GCE Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="erode.jpg" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="erode.jpg" alt="GALAXY26 GCE Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
                         </a>
-                        <div class="cert-info">
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <h3>GALAXY26 - GCE, Erode</h3>
-                                <p>Paper Presentation: Cobots in ECE</p>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">GALAXY26 - GCE, Erode</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">Paper Presentation: Cobots in ECE</p>
                             </div>
-                            <span class="cert-tag">SYMPOSIUM</span>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">SYMPOSIUM</span>
+                        </div>
+                    </div>
+                   <!-- Cert 7 -->
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="hp1_cert.png" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="hp1_cert.png" alt="HP Life- Professional Networking for  Carrer Growth Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                        </a>
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">HP LIFE CERTIFICATE</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">Professional Networking for  Carrer Growth</p>
+                            </div>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">SYMPOSIUM</span>
+                        </div>
+                    </div>
+                   <!-- Cert 8 -->
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="hp2_cert.png" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="hp2_cert.png" alt="HP Life- Critical Thinking in the AI Era" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                        </a>
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">HP LIFE CERTIFICATE</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;"> Critical Thinking in the AI Era </p>
+                            </div>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">SYMPOSIUM</span>
+                        </div>
+                    </div>
+                   <!-- Cert 9 -->
+
+                    <div class="glass-card cert-card-item" style="display: flex; flex-direction: column; padding: 16px;">
+                        <a href="Iv_cert.jpg" target="_blank" class="cert-img-wrapper" style="width: 100%; border-radius: 8px; overflow: hidden; display: block; background: rgba(255,255,255,0.05);">
+                            <img src="Iv_cert.jpg" alt="GALAXY26 GCE Certificate" style="width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 6px; display: block;" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
+                        </a>
+                        <div class="cert-info" style="margin-top: 16px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 6px;">BSNL CERTIFICATE</h3>
+                                <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px;">Industrial Visit- Bharath Sanchar Nigam Limited(BSNL) Certificate</p>
+                            </div>
+                            <span class="cert-tag" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; text-transform: uppercase;">SYMPOSIUM</span>
                         </div>
                     </div>
 
-                    <!-- Cert 7 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="hp1_cert.png" target="_blank" class="cert-img-wrapper">
-                            <img src="hp1_cert.png" alt="HP Life Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
-                        </a>
-                        <div class="cert-info">
-                            <div>
-                                <h3>HP LIFE CERTIFICATE</h3>
-                                <p>Professional Networking for Career Growth</p>
-                            </div>
-                            <span class="cert-tag">CERTIFICATION</span>
-                        </div>
-                    </div>
 
-                    <!-- Cert 8 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="hp2_cert.png" target="_blank" class="cert-img-wrapper">
-                            <img src="hp2_cert.png" alt="HP Life Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
-                        </a>
-                        <div class="cert-info">
-                            <div>
-                                <h3>HP LIFE CERTIFICATE</h3>
-                                <p>Critical Thinking in the AI Era</p>
-                            </div>
-                            <span class="cert-tag">CERTIFICATION</span>
-                        </div>
-                    </div>
-
-                    <!-- Cert 9 -->
-                    <div class="glass-card cert-card-item">
-                        <a href="Iv_cert.jpg" target="_blank" class="cert-img-wrapper">
-                            <img src="Iv_cert.jpg" alt="BSNL Certificate" onerror="this.src='https://via.placeholder.com/400x300?text=Certificate+Image';">
-                        </a>
-                        <div class="cert-info">
-                            <div>
-                                <h3>BSNL CERTIFICATE</h3>
-                                <p>Industrial Visit - BSNL</p>
-                            </div>
-                            <span class="cert-tag">INDUSTRIAL VISIT</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Full-Page Projects Section -->
-        <section id="projects" class="projects-section-fullscreen">
-            <!-- Full-Screen Project 1 -->
-            <div class="fullpage-project-card">
-                <img src="proj_img.png" alt="Design of Basic Electronic Voting Machine" class="project-bg-img" onerror="this.src='https://via.placeholder.com/1920x1080?text=Electronic+Voting+Machine';">
-                
-                <div class="project-hover-overlay">
-                    <span class="project-category-badge">BASIC IOT HARDWARE</span>
-                    <h3 class="project-title">Design of Basic Electronic Voting Machine</h3>
-                    <p class="project-description">
-                        A basic Electronic Voting Machine (EVM) built using CD4026 decade counters that count votes triggered by clock pulses and display the running tally on 7-segment LED displays in real time.
-                    </p>
-                    
-                    <div class="project-meta-footer">
-                        <div class="project-tags">
-                            <span class="glass-tag">CD4026</span>
-                            <span class="glass-tag">7-SEGMENT DISPLAY</span>
-                            <span class="glass-tag">IoT</span>
-                        </div>
-                        <a href="Design of Electronic Voting Machine.pdf" target="_blank" class="btn-primary">
-                            <span>View Technical Report</span>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Full-Screen Project 2 -->
-            <div class="fullpage-project-card">
-                <img src="proj2_img.png" alt="Biometric Voting System" class="project-bg-img" onerror="this.src='https://via.placeholder.com/1920x1080?text=Biometric+Voting+System';">
-                
-                <div class="project-hover-overlay">
-                    <span class="project-category-badge">BIOMETRIC &amp; EMBEDDED</span>
-                    <h3 class="project-title">Biometric Voting System</h3>
-                    <p class="project-description">
-                        An advanced fingerprint-authenticated voting architecture designed to eliminate voter fraud and duplicate casting using real-time bio-signal verification on microcontrollers.
-                    </p>
-                    
-                    <div class="project-meta-footer">
-                        <div class="project-tags">
-                            <span class="glass-tag">FINGERPRINT SENSOR</span>
-                            <span class="glass-tag">ARDUINO / ESP32</span>
-                            <span class="glass-tag">EMBEDDED C</span>
-                        </div>
-                        <a href="#" target="_blank" class="btn-primary">
-                            <span>View Technical Details</span>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section reveal">
-            <div class="container-narrow">
+<!-- Full-Width Page Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">GET IN TOUCH</span>
-                    <h2 class="section-title">Let's Connect</h2>
+                    <span class="section-subtitle">PRACTICAL EXPOSURE</span>
+                    <h2 class="section-title">Featured Projects</h2>
                 </div>
-                <div class="glass-card contact-card">
-                    <p class="contact-desc">
-                        Currently open for hardware, embedded systems, and VLSI internship or full-time opportunities.
-                    </p>
-                    <div class="contact-actions">
-                        <a href="mailto:ajayp@example.com" class="btn-glow">
-                            <span>Send an Email</span>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="btn-glass">LinkedIn Profile</a>
+
+                <div style="display: flex; flex-direction: column; gap: 48px;">
+                    
+                    <!-- Full-Width Project 1 -->
+                    <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="card-glow"></div>
+                        <div style="height: 420px; width: 100%; position: relative; display: flex; align-items: flex-end; padding: 32px; overflow: hidden;">
+                            <!-- Background Image -->
+                            <img src="proj_img.png" alt="Design of Basic Electronic Voting Machine" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                            <!-- Dark Gradient Overlay for Readability -->
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3)); z-index: 1; pointer-events: none;"></div>
+                            
+                            <span class="project-category" style="position: relative; z-index: 2;">BASIC IOT HARDWARE</span>
+                        </div>
+                        <div style="padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+                            <h3 style="font-size: 2rem; font-weight: 700; line-height: 1.2;">Design of Basic Electronic Voting Machine</h3>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 900px; line-height: 1.7;">
+                                A basic Electronic Voting Machine (EVM) built using CD4026 decade counters that count votes triggered by clock pulses and display the running tally on 7-segment LED displays in real time.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 16px;">
+                                <div class="project-tags">
+                                    <span class="glass-tag">CD4026</span>
+                                    <span class="glass-tag">7-SEGMENT DISPLAY</span>
+                                    <span class="glass-tag">IoT</span>
+                                </div>
+                                <a href="Design of Electronic Voting Machine.pdf" target="_blank" class="btn-primary">
+                                    <span>View Technical Report</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Full-Width Project 2 -->
+                    <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="card-glow"></div>
+                        <div style="height: 420px; width: 100%; position: relative; display: flex; align-items: flex-end; padding: 32px; overflow: hidden;">
+                            <!-- Background Image -->
+                            <img src="proj2_img.png" alt="Biometric Voting System" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                            <!-- Dark Gradient Overlay for Readability -->
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3)); z-index: 1; pointer-events: none;"></div>
+
+                            <span class="project-category" style="position: relative; z-index: 2;">FINGERPRINT BASED EVM</span>
+                        </div>
+                        <div style="padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+                            <h3 style="font-size: 2rem; font-weight: 700; line-height: 1.2;">Biometric Voting System</h3>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 900px; line-height: 1.7;">
+                                A fingerprint-based EVM using an Arduino microcontroller, RM307 fingerprint sensor for voter authentication, and an LCD display to show real-time vote counts and voter status after each cast.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 16px;">
+                                <div class="project-tags">
+                                    <span class="glass-tag">Arduino</span>
+                                    <span class="glass-tag">RM 307</span>
+                                    <span class="glass-tag">IoT</span>
+                                    <span class="glass-tag">Embedded Systems</span>
+                                </div>
+                                <a href="Fingerprint based Electronic Voting Machine.pdf" target="_blank" class="btn-primary">
+                                    <span>View Technical Report</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full-Width Project 3 -->
+                    <div class="glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="card-glow"></div>
+                        <div style="height: 420px; width: 100%; position: relative; display: flex; align-items: flex-end; padding: 32px; overflow: hidden;">
+                            <!-- Background Image (Update filename as needed) -->
+                            <img src="project3_img.jpeg" alt="TrackoVex" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" onerror="this.style.display='none';">
+                            <!-- Dark Gradient Overlay for Readability -->
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3)); z-index: 1; pointer-events: none;"></div>
+
+                            <span class="project-category" style="position: relative; z-index: 2;">BLE PROXIMITY TRACKING</span>
+                        </div>
+                        <div style="padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+                            <h3 style="font-size: 2rem; font-weight: 700; line-height: 1.2;">TrackoVex — A Simple Solution</h3>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 900px; line-height: 1.7;">
+                                TrackoVex is a compact BLE proximity tracker built on the nRF52832 SoC, using Bluetooth Low Energy beacons to locate and track everyday items with minimal power consumption.
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 16px;">
+                                <div class="project-tags">
+                                    <span class="glass-tag">nRF52832</span>
+                                    <span class="glass-tag">BLE</span>
+                                    <span class="glass-tag">WebDesign</span>
+                                </div>
+                                <a href="TrackoVex Report.pdf" target="_blank" class="btn-primary">
+                                    <span>View Technical Report</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- Footer / Contact Section -->
+        <footer id="contact" class="footer-section">
+            <div class="container-narrow text-center">
+                <div class="glass-card footer-card">
+                    <span class="section-subtitle">GET IN TOUCH</span>
+                    <h2 class="footer-title">Let's Build Something Exceptional</h2>
+                    <p class="footer-desc">
+                        Open for engineering internships, collaborative IoT research, and embedded hardware development.
+                    </p>
+                    <a href="mailto:ajaypandiyarajann@gmail.com" class="email-link">ajaypandiyarajann@gmail.com</a>
+
+                    <div class="social-grid">
+                        <a href="https://www.linkedin.com/in/ajay-pandiarajan-329163377/" target="_blank" class="social-pill">LinkedIn</a>
+                        <a href="https://github.com/ajay-pandiarajan" target="_blank" class="social-pill">GitHub</a>
+                        <a href="https://instagram.com/ajay.pandiarajan" target="_blank" class="social-pill">Instagram</a>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>&copy; Copyrights Reserved by 2026: Ajay P</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Ajay P. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
