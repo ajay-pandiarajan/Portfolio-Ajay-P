@@ -58,8 +58,6 @@ body {
   z-index: -1;
   pointer-events: none;
   opacity: 0.45;
-  will-change: transform;
-  transform: translateZ(0);
   animation: floatOrb 18s ease-in-out infinite alternate;
 }
 
@@ -90,9 +88,9 @@ body {
 }
 
 @keyframes floatOrb {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(40px, 60px, 0) scale(1.1); }
-  100% { transform: translate3d(-30px, -40px, 0) scale(0.95); }
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.1); }
+  100% { transform: translate(-30px, -40px) scale(0.95); }
 }
 
 /* Layout Containers */
@@ -144,7 +142,6 @@ body {
 
 /* Glassmorphism Card System */
 .glass-card {
-  background: rgba(15, 15, 20, 0.85);
   background: var(--bg-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -192,7 +189,6 @@ body {
   width: 100%;
   max-width: 900px;
   padding: 10px 24px;
-  background: rgba(15, 15, 20, 0.85);
   background: rgba(15, 15, 20, 0.65);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -278,7 +274,6 @@ body {
 .btn-glass {
   display: inline-flex;
   align-items: center;
-  background: rgba(15, 15, 20, 0.85);
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   color: #fff;
@@ -287,7 +282,6 @@ body {
   font-weight: 500;
   text-decoration: none;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   transition: var(--transition-smooth);
 }
 
@@ -380,7 +374,6 @@ body {
   position: relative;
   width: 340px;
   height: 420px;
-  background: rgba(15, 15, 20, 0.85);
   background: var(--bg-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -567,7 +560,6 @@ body {
   letter-spacing: 0.1em;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   padding: 4px 12px;
   border-radius: 100px;
   border: 1px solid var(--border-glass);
@@ -778,11 +770,15 @@ body.light-mode .cert-card-item img {
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
-
+  
   .hero-bio { margin: 0 auto 36px; }
   .hero-cta-group { justify-content: center; }
+
+  .bento-grid {
+  }
 
   .bento-span-2, .bento-span-3 {
     grid-column: span 2;
@@ -792,7 +788,7 @@ body.light-mode .cert-card-item img {
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hero-title { font-size: 2.5rem; }
-
+  
   .bento-grid {
     grid-template-columns: 1fr;
   }
@@ -803,24 +799,4 @@ body.light-mode .cert-card-item img {
   }
 
   .floating-tag { display: none; }
-}
-
-/* Accessibility & Reduced Motion Settings */
-@media (prefers-reduced-motion: reduce) {
-  .ambient-glow,
-  .pulse-dot {
-    animation: none !important;
-  }
-
-  .glass-card,
-  .btn-primary,
-  .btn-glow,
-  .btn-glass,
-  .btn-action,
-  .reveal,
-  .theme-toggle-btn,
-  .social-pill,
-  .nav-item {
-    transition: none !important;
-  }
 }
