@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Ambient Fluid Background Orbs -->
+    <div class="ambient-glow orb-1"></div>
+    <div class="ambient-glow orb-2"></div>
+    <div class="ambient-glow orb-3"></div>
+
     <!-- Floating Glass Navbar -->
     <header class="navbar-wrapper">
         <nav class="glass-nav">
@@ -62,10 +67,19 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="circular-avatar-frame">
+                    <div class="glass-avatar-frame">
+                        <div class="avatar-glow"></div>
                         <img src="profile.jpeg" alt="Ajay P" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="avatar-placeholder">
                             <span>AJAY P</span>
+                        </div>
+                        <div class="floating-tag tag-1">
+                            <span class="icon">⚡</span>
+                            <span>ESP32 / Arduino Specialist</span>
+                        </div>
+                        <div class="floating-tag tag-2">
+                            <span class="icon">📡</span>
+                            <span>BLE &amp; IoT Wireless</span>
                         </div>
                     </div>
                 </div>
@@ -436,6 +450,18 @@
                         Open for engineering internships, collaborative IoT research, and embedded hardware development.
                     </p>
                     <a href="mailto:ajaypandiyarajann@gmail.com" class="email-link">ajaypandiyarajann@gmail.com</a>
+
+                    <!-- Feedback / "Let's Talk" Form -->
+                    <form class="feedback-form" action="https://formspree.io/f/ajaypandiyarajann@gmail.com" method="POST" style="margin: 32px 0; text-align: left;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); color: inherit; font-family: inherit; outline: none;">
+                            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); color: inherit; font-family: inherit; outline: none;">
+                        </div>
+                        <textarea name="message" rows="4" placeholder="Your Message or Project Inquiry..." required style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); color: inherit; font-family: inherit; outline: none; resize: vertical; margin-bottom: 16px;"></textarea>
+                        <button type="submit" class="btn-glow" style="width: 100%; justify-content: center; cursor: pointer;">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
 
                     <div class="social-grid">
                         <a href="https://www.linkedin.com/in/ajay-pandiarajan-329163377/" target="_blank" class="social-pill">LinkedIn</a>
