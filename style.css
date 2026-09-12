@@ -966,3 +966,43 @@ body.light-mode .floating-tag {
     background: linear-gradient(to top, rgba(7, 7, 9, 0.98) 40%, rgba(7, 7, 9, 0.4) 100%);
   }
 }
+/* Vision & Mission Side-by-Side Layout */
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px; /* Space between grid and quote card */
+}
+
+.vm-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.vm-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vm-desc {
+    color: var(--text-secondary, #a0aec0);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+/* Responsive adjustment for small/mobile screens */
+@media (max-width: 768px) {
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+}
