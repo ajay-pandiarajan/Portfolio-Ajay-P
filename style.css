@@ -1006,9 +1006,14 @@ body.light-mode .floating-tag {
         margin-bottom: 24px;
     }
 }
+
 /* ==========================================================================
-   MINIMALIST CONTACT SECTION (MATCHING IMAGE)
+   MINIMALIST CONTACT & FOOTER FONT & LAYOUT STYLES
    ========================================================================== */
+
+.footer-section {
+  padding: 120px 0 40px;
+}
 
 .contact-grid {
   display: grid;
@@ -1018,26 +1023,45 @@ body.light-mode .floating-tag {
   padding-bottom: 80px;
 }
 
-.contact-heading {
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 16px 0 24px 0;
-  letter-spacing: -0.02em;
+/* Category Subtitle ("COLLABORATE") */
+.contact-info .section-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #6366f1; /* Crisp indigo accent */
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
 }
 
+/* Main Heading ("Let's build something significant.") */
+.contact-heading {
+  font-family: var(--font-main);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+/* Bio / Paragraph Subtext */
 .contact-subtext {
-  color: var(--text-secondary);
+  font-family: var(--font-main);
   font-size: 1.05rem;
+  font-weight: 400;
   line-height: 1.6;
+  color: #a1a1aa;
   max-width: 440px;
   margin-bottom: 48px;
 }
 
+/* Info Details Block (Email, Phone, Location) */
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 32px;
 }
 
 .contact-item {
@@ -1050,43 +1074,42 @@ body.light-mode .floating-tag {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
-.contact-item .detail-label {
+/* Labels ("EMAIL INQUIRIES", "FULL IDENTITY", etc.) */
+.contact-item .detail-label,
+.form-group label {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.contact-item .detail-value {
-  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
-  text-decoration: none;
+  letter-spacing: 0.18em;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
-/* Minimal Form Styling */
+/* Info Values (e.g., mailto address, phone number) */
+.contact-item .detail-value {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+/* Minimalist Form Elements */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.form-group label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
 }
 
 .form-group input,
@@ -1094,13 +1117,19 @@ body.light-mode .floating-tag {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--border-glass-bright);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding: 12px 0;
-  color: var(--text-primary);
+  color: #ffffff;
   font-family: var(--font-main);
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #3f3f46;
+  font-family: var(--font-main);
 }
 
 .form-group input:focus,
@@ -1108,40 +1137,39 @@ body.light-mode .floating-tag {
   border-bottom-color: #ffffff;
 }
 
-.form-group textarea {
-  resize: vertical;
-}
-
+/* Transmit Button Typography */
 .btn-transmit {
   width: 100%;
   background: #ffffff;
   color: #000000;
   border: none;
-  padding: 18px;
+  padding: 20px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.22em;
   cursor: pointer;
   text-transform: uppercase;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 12px;
 }
 
 .btn-transmit:hover {
-  background: #e2e8f0;
+  background: #e4e4e7;
   transform: translateY(-2px);
 }
 
-/* Bottom Footer Bar */
+/* Footer Bottom Bar Fonts */
 .contact-footer-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  border-top: 1px solid var(--border-glass);
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #71717a;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
 }
 
 .social-icons-wrapper {
@@ -1150,26 +1178,31 @@ body.light-mode .floating-tag {
 }
 
 .social-box-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-glass-bright);
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #38bdf8;
+  color: #0284c7;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-box-icon:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
   color: #ffffff;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 992px) {
+  .contact-heading {
+    font-size: 2.75rem;
+  }
+  
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 50px;
