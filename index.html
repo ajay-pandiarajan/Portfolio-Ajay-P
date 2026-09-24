@@ -622,24 +622,28 @@
             </div>
 
             <!-- Right Form Column -->
-            <div class="contact-form-wrapper">
-               <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
-    <!-- Add your Web3Forms Access Key here -->
-    <input type="hidden" name="access_key" value="b0762f4c-54a1-47c8-b086-d4bdcc65ff9e">
+            <div class="contact-form-wrapper" style="display: flex; flex-direction: column; height: 100%;">
+               <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="b0762f4c-54a1-47c8-b086-d4bdcc65ff9e">
 
-    <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit;">
-    </div>
-    <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit;">
-    </div>
-    <div class="form-group">
-        <textarea name="message" rows="4" placeholder="Your Message" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit; resize: vertical;"></textarea>
-    </div>
-    <button type="submit" class="btn-glow" style="cursor: pointer; border: none;">
-        <span>Send Message</span>
-    </button>
-</form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit;">
+                    </div>
+
+                    <!-- Expanded message field filling available container space -->
+                    <div class="form-group" style="flex: 1; display: flex;">
+                        <textarea name="message" rows="8" placeholder="Your Message" required style="width: 100%; min-height: 220px; flex: 1; padding: 14px; border-radius: 8px; border: 1px solid var(--border-glass, rgba(255,255,255,0.2)); background: rgba(255,255,255,0.05); color: inherit; resize: vertical; font-family: inherit;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-glow" style="cursor: pointer; border: none; padding: 14px; text-align: center;">
+                        <span>Send Message</span>
+                    </button>
+                </form>
             </div>
         </div>
 
